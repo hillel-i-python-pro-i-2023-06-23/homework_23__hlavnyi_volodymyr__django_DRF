@@ -1,0 +1,6 @@
+
+<h2> Contact list </h2>
+<p> (first name)  (last name)  (email) (phone number) </p>
+{% for contact in contacts_list %}
+    <p> {{ contact.first_name }}  {{ contact.last_name }}  {{ contact.email }}  {{ contact.phone_number }} ({{ contact.id }})</p>
+{% endfor %}
