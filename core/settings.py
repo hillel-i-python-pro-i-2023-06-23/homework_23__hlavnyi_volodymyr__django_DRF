@@ -55,6 +55,7 @@ LOCAL_APPS = [
 THIRD_PARTY_APPS = [
     # "bootstrap5",
     # "phonenumber_field",
+    "drf_yasg",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS

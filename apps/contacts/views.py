@@ -3,6 +3,8 @@ from rest_framework import generics
 from .models import Contact
 from .serializers import ContactSerializer
 
+# from drf_yasg.utils import swagger_auto_schema
+
 
 class ContactListView(generics.ListCreateAPIView):
     queryset = Contact.objects.all()
