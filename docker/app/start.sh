@@ -19,7 +19,7 @@ make migrate
 make init-dev-i-create-superuser || echo "Superuser already exists."
 
 # First initialize the database.
-# make init-first-start-db
+make init-first-start-db
 
 # Run application.
 python manage.py runserver 0.0.0.0:8000
