@@ -48,6 +48,7 @@ d-stop:
 # Purge all data related with services
 d-purge:
 	@COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 \
+		COMPOSE_PROFILES=local_dev \
 		docker compose down --volumes --remove-orphans --rmi local --timeout 0
 
 
@@ -88,16 +89,6 @@ migrations:
 # Migrate
 migrate:
 	@python manage.py migrate
-
-.PHONY: homework-i-run-generate-contacts
-# Run homework with generate 15 contacts.
-homework-i-run-generate-contacts:
-	@bash ./scripts/d-homework-i-run-contacts-generate.sh
-
-.PHONY: homework-i-run-delete-contacts-all
-# Run homework with delete all contacts.
-homework-i-run-delete-contacts-all:
-	@bash ./scripts/d-homework-i-run-contacts-delete-all.sh
 
 .PHONY: init-dev-i-migrate-all
 # Make migrations and make migrate together

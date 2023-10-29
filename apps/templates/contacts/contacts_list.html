@@ -1,0 +1,8 @@
+{% include "_base/_header.html" %}
+<br>
+<h3> Contact list </h3>
+<br>
+<p> (first name)  (last name)  (email) (phone number) </p>
+{% for contact in contacts_list %}
+    <p> {{ contact.first_name }}  {{ contact.last_name }}  {{ contact.email }}  {{ contact.phone_number }} ({{ contact.id }})</p>
+{% endfor %}
